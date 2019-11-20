@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Astralvix/spring-config-server.git
+          ignore-local-ssh-settings: true
+          strict-host-key-checking: false
+          search-paths:
+          - configuration/{application}/
+          - configuration/
+
+  jpa:
+    properites:
+      hibernate:
+        default_schema: ${RIDESHARE_POSTGRES_1909_SCHEMA}
+  datasource:
+    url: jdbc:postgresql://${RIDESHARE_POSTGRES_1909_URL}:5432/postgres?
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://localhost:8761/eureka  
