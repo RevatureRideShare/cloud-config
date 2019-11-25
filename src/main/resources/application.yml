@@ -16,7 +16,7 @@ spring:
           - configuration/
 
   jpa:
-    properites:
+    properties:
       hibernate:
         default_schema: ${RIDESHARE_POSTGRES_1909_SCHEMA}
   datasource:
