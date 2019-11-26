@@ -13,7 +13,7 @@ spring:
           strict-host-key-checking: false
           search-paths:
           - configuration/{application}/
-          - configuration/
+          #- configuration/
 
   jpa:
     properties:
