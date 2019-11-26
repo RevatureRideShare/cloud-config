@@ -19,7 +19,8 @@ spring:
     properties:
       hibernate:
         default_schema: ${RIDESHARE_POSTGRES_1909_SCHEMA}    
-  database:          
+  database:
+    driverClassName: org.postgresql.Driver           
   datasource:
     url: jdbc:postgresql://${RIDESHARE_POSTGRES_1909_URL}:5432/postgres?
     username: ${RIDESHARE_POSTGRES_1909_USERNAME}
