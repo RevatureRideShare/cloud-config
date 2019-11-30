@@ -98,7 +98,7 @@ pipeline {
             steps {
                 script{
                     if(env.BRANCH_NAME == 'master' ){
-                        withCredentials([[$class          : 'UsernamePasswordMultiBinding',
+                        withCredentials([[$class  : 'UsernamePasswordMultiBinding',
                                   credentialsId   : 'PCF_LOGIN',
                                   usernameVariable: 'USERNAME',
                                   passwordVariable: 'PASSWORD']]) {
