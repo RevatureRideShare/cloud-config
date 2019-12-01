@@ -18,7 +18,7 @@ pipeline {
         SONAR_SCANNER_OPTS="-server" 
         ORG="RevatureRideShare"
         REPO="cloud-config"
-	BRANCH="master"       
+	    BRANCH="master"       
     }
 
     stages {
